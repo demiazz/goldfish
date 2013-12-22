@@ -19,17 +19,17 @@ function rbenv_plugin_init
   end
 
   if test $fish_rbenv = 1
-    alias rbl  "rbenv local"
-    alias rbg  "rbenv global"
-    alias rbs  "rbenv shell"
-    alias rbi  "rbenv install"
-    alias rbu  "rbenv uninstall"
-    alias rbh  "rbenv rehash"
-    alias rbv  "rbenv version"
-    alias rbvn "rbenv version-name"
-    alias rbvs "rbenv versions"
-    alias rbw  "rbenv which"
-    alias rbwh "rbenv whence"
+    gf_safe_alias "rbl"  "rbenv local"
+    gf_safe_alias "rbg"  "rbenv global"
+    gf_safe_alias "rbs"  "rbenv shell"
+    gf_safe_alias "rbi"  "rbenv install"
+    gf_safe_alias "rbu"  "rbenv uninstall"
+    gf_safe_alias "rbh"  "rbenv rehash"
+    gf_safe_alias "rbv"  "rbenv version"
+    gf_safe_alias "rbvn" "rbenv version-name"
+    gf_safe_alias "rbvs" "rbenv versions"
+    gf_safe_alias "rbw"  "rbenv which"
+    gf_safe_alias "rbwh" "rbenv whence"
   end
 end
 

@@ -13,3 +13,10 @@ function gf_append_path
     set $path $argv[1] $$path
   end
 end
+
+# Bind alias only if not exists bin with alias name.
+function gf_safe_alias
+  if not which $argv[1]
+    alias $argv[1] $argv[2]
+  end
+end
