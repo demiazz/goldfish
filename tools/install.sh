@@ -6,7 +6,7 @@ then
   exit
 fi
 
-echo -e "\033[0;34mCloning Oh My Fish...\033[0m"
+echo -e "\033[0;34mCloning Goldfish...\033[0m"
 hash git >/dev/null && /usr/bin/env git clone https://github.com/demiazz/goldfish.git ~/.goldfish || {
   echo -e "git not installed"
   exit
