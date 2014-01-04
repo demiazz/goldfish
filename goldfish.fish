@@ -1,5 +1,8 @@
 #===== GOLDFISH RUNTIME ========================================================
 
+# Turn off welcome message
+set fish_greeting ""
+
 # Load utilities
 . $fish_path/utilities.fish
 
