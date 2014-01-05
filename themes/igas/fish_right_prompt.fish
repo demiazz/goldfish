@@ -13,6 +13,6 @@ set -g __fish_git_prompt_char_untrackedfiles " | … "
 set -g __fish_git_prompt_char_conflictedstate " | ✖ "
 set -g __fish_git_prompt_char_cleanstate " | ✔ "
 
-function fish_right_prompt --description 'Igas theme'
+function fish_right_prompt --description "Theme: igas"
   echo -n -s (__fish_git_prompt "[ %s ]")
 end
