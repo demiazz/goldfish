@@ -3,8 +3,8 @@
 # Turn off welcome message
 set fish_greeting ""
 
-# Load utilities
-. $goldfish_path/utilities.fish
+# Load goldfish functions
+set fish_function_path $fish_function_path $goldfish_path/functions
 
 # Load plugins
 for plugin in $plugins
