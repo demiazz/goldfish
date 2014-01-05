@@ -6,6 +6,11 @@ set fish_greeting ""
 # Load goldfish functions
 set fish_function_path $fish_function_path $goldfish_path/functions
 
+# Auto update
+if not test $disable_update_checking = true
+  check_for_update
+end
+
 # Load plugins
 for plugin in $plugins
   . $goldfish_path/plugins/$plugin.fish

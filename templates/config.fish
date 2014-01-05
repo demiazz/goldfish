@@ -1,6 +1,6 @@
 #===== GOLDFISH PATH ===========================================================
 
-set goldfish_path $HOME/.goldfish
+set -g goldfish_path $HOME/.goldfish
 
 #===== GOLDFISH CONFIG =========================================================
 
@@ -9,6 +9,14 @@ set goldfish_path $HOME/.goldfish
 
 # Uncomment and set theme
 # set -g theme default
+
+#===== GOLDFISH CHECKING FOR UPDATES ===========================================
+
+# Uncomment for turn off checking
+# set -g disable_update_checking true
+
+# How often check for updates (in days)
+# set -g check_for_updates_period 7
 
 #===== GOLDFISH LOADING ========================================================
 
