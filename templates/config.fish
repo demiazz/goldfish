@@ -8,7 +8,7 @@ set fish_path $HOME/.goldfish
 # set -g goldfish_plugins rbenv
 
 # Uncomment and set theme
-# set -g goldfish_theme default
+# set -g theme default
 
 #===== GOLDFISH LOADING ========================================================
 

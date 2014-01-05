@@ -17,16 +17,10 @@ for plugin in $HOME/.config/fish/plugins/*.fish
 end
 
 # Load theme
-if test (set -q goldfish_theme)
-  if test -e $fish_path/themes/$goldfish_theme.fish
-    . $fish_path/themes/$goldfish_theme.fish
-  else if test -e $HOME/.config/fish/themes/$goldfish_theme.fish
-    . $HOME/.config/fish/themes/$goldfish_theme.fish
-  else if test -e $HOME/.config/fish/theme.fish
-    . $HOME/.config/fish/theme.fish
-  end
-else
-  if test -e $HOME/.config/fish/theme.fish
-    . $HOME/.config/fish/theme.fish
+if test -n theme
+  if test -d $fish_path/themes/$theme
+    set fish_function_path $fish_path/themes/$theme $fish_function_path
+  else if test -d $HOME/.config/fish/themes/$theme
+    set fish_function_path $HOME/.config/fish/themes/$theme $fish_function_path
   end
 end
