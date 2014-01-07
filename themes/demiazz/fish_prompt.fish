@@ -27,7 +27,7 @@ function fish_prompt --description "Theme: demiazz"
 
   # ruby version (via rbenv)
 
-  if test $fish_rbenv = 1
+  if test $is_rbenv_enabled = 1
     set_color -b black white
     printf "  %s" (rbenv version-name)
   end
