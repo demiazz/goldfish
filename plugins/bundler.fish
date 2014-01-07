@@ -1,6 +1,10 @@
-#===== BUNDLER PLUGIN ==========================================================
-#
-# Originally: bundler plugin for Oh My Fish project
+#===== DEFAULT VARIABLES =======================================================
+
+set -l __bundler_wrap annotate cap capify cucumber foreman guard middleman \
+                      nanoc rackup rainbows rake rspec ruby shotgun sidekiq \
+                      spec spinach spork thin thor unicorn unicorn_rails
+
+#===== UTILITIES ===============================================================
 
 function __is_bundler_installed
   which bundle > /dev/null ^&1
@@ -25,12 +29,20 @@ function __run_with_bundler
   end
 end
 
-function bundler_plugin_init
-  if set -q bundler_wrap
-    for cmd in $bundler_wrap
-      eval "function $cmd; __run_with_bundler $cmd \$argv; end"
+function __wrap_with_bundler -a cmd
+  eval "function $cmd; __run_with_bundler $cmd \$argv; end"
+end
+
+#===== INITIALIZATION ==========================================================
+
+for cmd in $__bundler_wrap
+  __wrap_with_bundler $cmd
+end
+
+if set -q bundler_wrap
+  for cmd in $bundler_wrap
+    if not contains $cmd $__bundler_wrap
+      __wrap_with_bundler $cmd
     end
   end
 end
-
-bundler_plugin_init
