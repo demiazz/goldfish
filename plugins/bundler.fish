@@ -2,7 +2,8 @@
 
 set -l __bundler_wrap annotate cap capify cucumber foreman guard middleman \
                       nanoc rackup rainbows rake rspec ruby shotgun sidekiq \
-                      spec spinach spork thin thor unicorn unicorn_rails
+                      spec spinach spork thin thor unicorn unicorn_rails \
+                      teaspoon rails
 
 #===== UTILITIES ===============================================================
 
