@@ -34,8 +34,10 @@ function fish_prompt --description "Theme: demiazz"
 
   # git branch
 
-  set_color -b black white
-  printf "   %s" (git rev-parse --abbrev-ref HEAD)
+  if test -d ./.git
+    set_color -b black white
+    printf "   %s" (git rev-parse --abbrev-ref HEAD)
+  end
 
   # epilogue
 
