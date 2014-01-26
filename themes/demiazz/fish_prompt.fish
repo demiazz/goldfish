@@ -12,39 +12,39 @@ function fish_prompt --description "Theme: demiazz"
       set_color -b black white
       printf ""
     case '*'
-      set_color -b blue black 
+      set_color -b blue white
       printf " %s " $USER
-      set_color -b black blue
+      set_color -b white blue
       printf ""
-      set_color -b white black
+      set_color -b black white
       printf ""
   end
 
   # current directory
 
-  set_color -b white black
+  set_color -b black white
   printf " %s" (prompt_pwd)
 
   # ruby version (via rbenv)
 
   if test $is_rbenv_enabled = 1
-    set_color -b white black 
+    set_color -b black white
     printf "  %s" (rbenv version-name)
   end
 
   # git branch
 
   if test -d ./.git
-    set_color -b white black
+    set_color -b black white
     printf "   %s" (git rev-parse --abbrev-ref HEAD)
   end
 
   # epilogue
 
-  set_color -b white black
+  set_color -b black white
   printf " "
-  set_color -b normal white
+  set_color -b normal black
   printf " "
 
-  set_color -b normal white
+  set_color -b normal black
 end
